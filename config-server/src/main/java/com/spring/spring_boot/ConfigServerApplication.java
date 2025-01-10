@@ -1,15 +1,15 @@
-package com.example.clientservice;
+package com.spring.spring_boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
+@EnableConfigServer
 @EnableEurekaClient
-@EnableFeignClients
-public class Main {
+public class ConfigServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(ConfigServerApplication.class, args);
     }
 }

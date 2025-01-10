@@ -1,1 +1,25 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone:
+        http://localhost:8761/eureka
+
+spring:
+  application:
+    name: book-service
+#  config:
+#    import: 'optional:configserver:'
+  cloud:
+    config:
+      enabled: false
+
+  profiles:
+    active: native
+  data:
+    mongodb:
+      database: mongodb
+
 
