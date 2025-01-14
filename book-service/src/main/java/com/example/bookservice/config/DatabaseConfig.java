@@ -25,9 +25,9 @@ public class DatabaseConfig {
         return args -> {
             // Создаем список книг для сохранения в базу данных
             List<Book> books = Arrays.asList(
-                    Book.builder().title("Book 1").description("Description 1").imageLink("Link 1").build(),
-                    Book.builder().title("Book 2").description("Description 2").imageLink("Link 2").build(),
-                    Book.builder().title("Book 3").description("Description 3").imageLink("Link 3").build()
+                    Book.builder().title("Book 1").description("Description 1").build(),
+                    Book.builder().title("Book 2").description("Description 2").build(),
+                    Book.builder().title("Book 3").description("Description 3").build()
             );
             // Сохраняем книги в базу данных
             mongoTemplate.insertAll(books);
