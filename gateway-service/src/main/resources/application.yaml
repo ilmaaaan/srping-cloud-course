@@ -8,13 +8,13 @@ eureka:
 spring:
   application:
     name: gateway
-#  cloud:
-#    gateway:
-#      routes:
-#        - id: client-service
-#          uri: lb://client-service
-#          predicates:
-#            - Header=spring-cloud-course, .*
+  cloud:
+    gateway:
+      routes:
+        - id: client-service
+          uri: lb://client-service
+          predicates:
+            - Path=client/test
 
 server:
   port: 4444

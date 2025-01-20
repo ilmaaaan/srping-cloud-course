@@ -1,15 +1,18 @@
 server:
-  port: 8082
+  port: 8083
 
 eureka:
   client:
     service-url:
       defaultZone:
         http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
 
 spring:
   application:
     name: client-service
+
   #  config:
   #    import: 'optional:configserver:'
   cloud:
@@ -17,14 +20,3 @@ spring:
       enabled: false
   profiles:
     active: native
-  sleuth:
-    sampler:
-      probability: 2.0
-  zipkin:
-    enabled: true
-
-feign:
-  circuitbreaker:
-    enabled: true
-
-
