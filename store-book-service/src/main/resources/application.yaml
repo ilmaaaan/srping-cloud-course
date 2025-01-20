@@ -1,0 +1,16 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: store-book-service
+  cloud:
+    config:
+      enabled: false
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+  profiles:
+    active: native
+
+

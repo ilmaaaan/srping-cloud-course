@@ -4,7 +4,6 @@ import com.example.bookservice.model.Book;
 import com.example.bookservice.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
